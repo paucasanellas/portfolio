@@ -53,6 +53,8 @@ pnpm dev:host
 
 Keep local environment values in `.env`, which is ignored by Git. Document any new variables in `.env.example`.
 
+The `audit.ignore` list in `pnpm-workspace.yaml` contains three explicitly approved Nuxt DevTools advisory exceptions from issue #5. These exceptions suppress those specific audit findings; they do not fix the dependencies. All other advisories remain checked. Review and remove the exceptions when compatible upstream fixes are available.
+
 ## Scripts
 
 | Command | Description |
