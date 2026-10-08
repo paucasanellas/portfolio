@@ -10,13 +10,12 @@ Reglas para escribir la documentación de este proyecto. Aplican a agentes y a u
 | Puntual | `docs/references/` | Descubrimiento progresivo, solo cuando se necesita | Detalle de conceptos concretos |
 
 - Antes de añadir algo a `docs/core/`, comprobar que de verdad hace falta en todo momento: cada línea ocupa contexto en cada sesión.
-- Lo que solo se necesita a veces va a `docs/references/`.
 
 ## Idioma
 
 - El contenido se escribe en **castellano**.
 - Excepción: el `README.md` va en **inglés** — es la puerta de entrada pública del repositorio.
-- Las carpetas y los nombres de fichero van en **inglés y en kebab-case**.
+- Las carpetas y los nombres de fichero van en **inglés y en kebab-case**, salvo nombres convencionales como `README.md` y `AGENTS.md`.
 - Los identificadores y fragmentos de código conservan su idioma original.
 
 ## Tono
@@ -38,13 +37,12 @@ Reglas para escribir la documentación de este proyecto. Aplican a agentes y a u
 
 ## Estructura
 
-- **Un documento cubre un solo concepto.** Si al describirlo hace falta una «y», son dos documentos.
+- **Un documento cubre un solo concepto.** Separar los conceptos que puedan consultarse y mantenerse de forma independiente.
 - Los documentos se agrupan en subcarpetas por contexto cuando aporta claridad.
 
 ## Registro en AGENTS.md
 
 - **Todo fichero nuevo en `docs/` se registra en `AGENTS.md`**: los de `core/` en la lista de contexto obligatorio y los de `references/` en la tabla.
-- La lista de `core/` contiene las rutas a línea suelta, sin repetir su contenido. Cada fichero ya lleva su título.
+- La lista de `core/` contiene una ruta por línea.
 - La tabla de `references/` tiene dos columnas: la ruta y una línea que dice cuándo consultar el fichero.
-
-- **La descripción es el mecanismo de descubrimiento**: es lo único que un agente lee para decidir si abre el fichero. Una descripción vaga es un fichero que no se consulta nunca.
+- **La descripción debe permitir decidir cuándo consultar el fichero.** Indicar situaciones concretas; evitar descripciones vagas.
