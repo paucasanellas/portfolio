@@ -34,9 +34,10 @@ Cómo entregar, revisar e integrar una tarea.
 | `pre-commit` | `pnpm lint` y `pnpm typecheck`. |
 | `commit-msg` | Commitlint. |
 | `pre-push` | `pnpm build`. |
-| CI de PR a `main` | Auditoría de dependencias, lint y typecheck; bloquea vulnerabilidades críticas detectadas. |
+| CI de PR a `main` | Auditoría de dependencias, lint y typecheck; bloquea avisos críticos sin una excepción explícita. |
 
 - El CI actual no ejecuta el build ni valida automáticamente nombres de rama o títulos de PR. Esas comprobaciones siguen siendo responsabilidad del autor.
+- Consultar `audit.ignore` en `pnpm-workspace.yaml` para identificar las excepciones de auditoría aprobadas. Una excepción no corrige la dependencia ni autoriza añadir otros avisos a la lista.
 - Respetar hooks, checks requeridos y requisitos particulares de la tarea. No añadir tests que solo repitan la implementación; usar pruebas acordes al riesgo y al comportamiento modificado.
 - Ante un fallo atribuible al cambio, corregirlo antes de revisión. Ante un bloqueo externo, seguir [autonomy.md](autonomy.md).
 - Las solicitudes de cambios, PRs cerradas sin merge y el seguimiento se gestionan en [autonomy.md](autonomy.md).
