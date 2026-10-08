@@ -86,6 +86,8 @@ docs: update setup instructions
 
 Pull requests targeting `main` run dependency auditing, linting, and type checking through GitHub Actions. Release Please is configured to manage release updates on pushes to `main`.
 
+The `audit.ignore` list in `pnpm-workspace.yaml` contains three explicitly approved Nuxt DevTools advisory exceptions from issue #5. These exceptions suppress those specific audit findings; they do not fix the dependencies. All other advisories remain checked. Review and remove the exceptions when compatible upstream fixes are available.
+
 ## Production
 
 Build and preview the application locally:
