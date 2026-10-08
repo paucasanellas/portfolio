@@ -76,7 +76,7 @@ pnpm typecheck
 pnpm build
 ```
 
-Git hooks run linting before commits, type checking and a production build before pushes, and Commitlint to validate commit messages. Use Conventional Commits, for example:
+Git hooks run linting and type checking before commits, a production build before pushes, and Commitlint to validate commit messages. Use Conventional Commits, for example:
 
 ```text
 feat: add the about section
@@ -85,6 +85,18 @@ docs: update setup instructions
 ```
 
 Pull requests targeting `main` run dependency auditing, linting, and type checking through GitHub Actions. Release Please is configured to manage release updates on pushes to `main`.
+
+The workflow documentation is written in Spanish and defines how work will be tracked in [GitHub Project 17](https://github.com/users/paucasanellas/projects/17). Project fields, views, branch protection, and merge settings still need to be configured as described in the project guide; adding these documents does not enable automation.
+
+| Guide | When to use it |
+| --- | --- |
+| [GitHub operations](docs/references/workflow/operations.md) | Access GitHub through the CLI and verify remote operations. |
+| [Project](docs/references/workflow/project.md) | Configure fields and views, prioritize tasks, estimate work, and track status. |
+| [Issues](docs/references/workflow/issues.md) | Prepare tasks, classify work, and define sub-issues and dependencies. |
+| [Autonomous work](docs/references/workflow/autonomy.md) | Select authorized tasks, record progress, and resume interrupted work. |
+| [Branching](docs/references/workflow/branching.md) | Create and isolate task branches. |
+| [Commits](docs/references/workflow/commits.md) | Write Conventional Commits and describe breaking changes. |
+| [Pull requests](docs/references/workflow/pull-requests.md) | Prepare, validate, review, and merge deliveries. |
 
 ## Production
 
