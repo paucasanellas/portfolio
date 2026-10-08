@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 📥 Check out the repository
+        uses: actions/checkout@v7
+
+      - name: 📦 Set up pnpm and Node, then install dependencies
+        uses: pnpm/setup@v2
+        with:
+          cache: true
+
+      - name: 🔐 Audit dependencies
+        id: audit
+        continue-on-error: true
+        run: pnpm audit --audit-level low --ignore-registry-errors
+
+      - name: 🚨 Block critical vulnerabilities
+        if: steps.audit.outcome == 'failure'
+        run: pnpm audit --audit-level critical --ignore-registry-errors
+
+      - name: 🧹 Lint
+        run: pnpm lint
+
+      - name: ✅ Typecheck
+        run: pnpm typecheck
