@@ -2,3 +2,10 @@ allowBuilds:
   esbuild: true
   unrs-resolver: true
   vue-demi: true
+
+# Exceptions approved in issue #5; keep all other audit checks active.
+audit:
+  ignore:
+    - GHSA-v5rq-49vh-5v5c # @simple-git/argv-parser
+    - GHSA-x6jw-m9v5-85vh # simple-git
+    - GHSA-pqg4-j6r4-53mv # shell-quote
