@@ -30,10 +30,10 @@ Usar también los campos nativos `Labels`, `Assignees`, `Linked pull requests`, 
 | `Backlog` | Idea o tarea pendiente de preparación o autorización. | Al crearla; también si se retira su autorización. |
 | `Ready` | Tarea preparada y autorizada para empezar. | Según [autonomy.md](autonomy.md). |
 | `In Progress` | Implementación activa. | Al registrar el inicio; revisión solicitada que exige cambios. |
-| `In Review` | Entrega lista, validaciones correctas, pendiente de Pau. | PR según [pull-requests.md](pull-requests.md); investigación sin archivos según [autonomy.md](autonomy.md). |
+| `In Review` | Entrega lista, validaciones correctas, pendiente del usuario. | PR según [pull-requests.md](pull-requests.md); investigación sin archivos según [autonomy.md](autonomy.md). |
 | `Blocked` | Trabajo autorizado detenido por una dependencia, decisión o fallo externo. | Registrar causa, contexto y condición para reanudar. |
-| `Done` | Entrega completada y aceptada. | PR mergeada; en una entrega sin código, aceptación explícita de Pau. |
-| `Cancelled` | Trabajo descartado. | Decisión de Pau, motivo registrado y cierre `not planned`. |
+| `Done` | Entrega completada y aceptada. | PR mergeada; en una entrega sin código, aceptación explícita del usuario. |
+| `Cancelled` | Trabajo descartado. | Decisión del usuario, motivo registrado y cierre `not planned`. |
 
 - **Una PR abierta, aunque esté lista, no equivale a `Done`.** Cerrar las entregas aceptadas como `completed`; el estado del tablero no sustituye ese cierre.
 - Una dependencia pendiente detectada antes de autorizar mantiene la tarea en `Backlog`.
@@ -95,11 +95,11 @@ En una tarea posterior:
 4. Crear las vistas anteriores. Asociar el repositorio al Project y configurar un único auto-add para sus issues abiertas con `is:issue is:open`, nunca para PRs. GitHub Free admite un workflow de auto-add por Project. Añadir manualmente las issues existentes que falten.
 5. Desactivar el workflow genérico «issue cerrada → Done» y el cierre de issues al arrastrar tarjetas. La aceptación y el motivo de cierre deben comprobarse antes de actualizar el tablero.
 6. Habilitar posteriormente una conciliación con las reglas de [autonomy.md](autonomy.md). Hasta entonces, el operador verifica y actualiza los estados con `gh`; no se presupone sincronización automática.
-7. Comprobar visibilidad y plan antes de configurar protecciones. GitHub Free permite proteger `main` en este repositorio público: exigir PR, el check de calidad de CI y resolución de conversaciones; impedir force-push y borrado. Pau conserva la decisión de merge; no exigir una aprobación formal de un segundo usuario en un repositorio individual. Si el repositorio pasa a privado con GitHub Free, registrar la limitación y mantener las reglas como comprobaciones del agente y del mantenedor; no presentarlas como restricciones impuestas por GitHub ni cambiar visibilidad o plan automáticamente.
+7. Comprobar visibilidad y plan antes de configurar protecciones. GitHub Free permite proteger `main` en este repositorio público: exigir PR, el check de calidad de CI y resolución de conversaciones; impedir force-push y borrado. El usuario conserva la decisión de merge; no exigir una aprobación formal de un segundo usuario en un repositorio individual. Si el repositorio pasa a privado con GitHub Free, registrar la limitación y mantener las reglas como comprobaciones del agente y del mantenedor; no presentarlas como restricciones impuestas por GitHub ni cambiar visibilidad o plan automáticamente.
 8. Permitir solo squash, configurar el título de PR como título del commit y activar el borrado de ramas remotas. No habilitar auto-merge.
 9. Reconciliar el límite de Commitlint con [commits.md](commits.md) y comprobar la configuración de [pull-requests.md](pull-requests.md).
 
-**No iniciar el bucle autónomo mientras falten los campos, estados o permisos necesarios.** La publicación inicial de la documentación y la creación de su tarea de configuración pueden realizarse con autorización explícita de Pau. Registrar sus issues, ramas y PRs; anotar en la issue prioridad, estimación y estado lógico si esos campos aún no existen. Esta excepción de adopción no habilita la selección autónoma ni configura el repositorio por sí misma.
+**No iniciar el bucle autónomo mientras falten los campos, estados o permisos necesarios.** La publicación inicial de la documentación y la creación de su tarea de configuración pueden realizarse con autorización explícita del usuario. Registrar sus issues, ramas y PRs; anotar en la issue prioridad, estimación y estado lógico si esos campos aún no existen. Esta excepción de adopción no habilita la selección autónoma ni configura el repositorio por sí misma.
 
 ## Referencias
 

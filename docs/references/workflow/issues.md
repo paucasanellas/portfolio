@@ -5,7 +5,7 @@ Cómo definir trabajo trazable y preparado para ejecución.
 ## Unidad de trabajo
 
 - **Todo cambio humano tiene una issue del repositorio y una tarjeta en el Project.** Incluye documentación y mantenimiento pequeños. Excepciones de bots: [pull-requests.md](pull-requests.md).
-- Una issue ejecutable entrega un resultado verificable. Si modifica el repositorio, tiene una rama y una PR; una investigación sin cambios en archivos registra su resultado en la issue para aceptación de Pau. Separar trabajo que pueda entregarse y revisarse de forma independiente.
+- Una issue ejecutable entrega un resultado verificable. Si modifica el repositorio, tiene una rama y una PR; una investigación sin cambios en archivos registra su resultado en la issue para aceptación del usuario. Separar trabajo que pueda entregarse y revisarse de forma independiente.
 - Título, descripción y comentarios en **castellano**. El título expresa una acción y su resultado, por ejemplo «Añadir el encabezado de la aplicación».
 - No guardar tareas ejecutables como draft items del Project: convertirlas en issues para obtener número, relaciones y seguimiento.
 
@@ -87,7 +87,7 @@ Resultado observable de la tarea.
 3. Registrar dependencias entre subtareas. Pertenecer al mismo padre no implica un orden de ejecución.
 4. Añadir padre y subtareas al Project. Usar `Sub-issues progress`; no mantener una segunda lista de progreso manual.
 5. Autorizar cada subtarea por separado. Autorizar el padre no autoriza todos sus descendientes.
-6. Cerrar el padre cuando todas las subtareas estén completadas y Pau acepte los criterios conjuntos. Si alguna se cancela, revisar con Pau el alcance del padre antes de cerrarlo como completado.
+6. Cerrar el padre cuando todas las subtareas estén completadas y el usuario acepte los criterios conjuntos. Si alguna se cancela, revisar con el usuario el alcance del padre antes de cerrarlo como completado.
 
 Ejemplo: «Reconstruir la home» coordina «Añadir encabezado», «Crear presentación» y «Mostrar proyectos». Cada subtarea tiene su rama y PR; el padre no genera una PR adicional.
 
@@ -95,4 +95,4 @@ Ejemplo: «Reconstruir la home» coordina «Añadir encabezado», «Crear presen
 
 - Para trabajo fuera de alcance, buscar primero una issue equivalente. Crear o actualizar una propuesta en `Backlog` con contexto, etiquetas y relaciones; estimar solo si hay información suficiente.
 - Un bug crítico recién descubierto se comunica con su evidencia y propuesta de prioridad. Su urgencia no autoriza empezar por sí sola.
-- Registrar duplicados y enlazar la issue canónica. Aplicar una cancelación cuando Pau la decida, usando el cierre y estado definidos en [project.md](project.md).
+- Registrar duplicados y enlazar la issue canónica. Aplicar una cancelación cuando el usuario la decida, usando el cierre y estado definidos en [project.md](project.md).

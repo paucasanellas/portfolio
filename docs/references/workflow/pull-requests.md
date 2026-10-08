@@ -44,7 +44,7 @@ Cómo entregar, revisar e integrar una tarea.
 
 ## Merge
 
-**Pau decide el merge; integrar siempre mediante squash.** El agente solo lo ejecuta si Pau lo pide expresamente para esa PR.
+**El usuario decide el merge; integrar siempre mediante squash.** El agente solo lo ejecuta si el usuario lo pide expresamente para esa PR.
 
 Antes del merge:
 

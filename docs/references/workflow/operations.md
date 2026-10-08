@@ -7,7 +7,7 @@ Cómo consultar y modificar GitHub desde el agente.
 - **Usar `gh` para issues, pull requests, checks y Projects.** Usar `git` para el repositorio local, `fetch` y `push`.
 - Ejecutar `gh` en el host, fuera del sandbox, con los permisos del entorno. El sandbox puede no acceder al keyring; un fallo allí no demuestra que las credenciales sean inválidas.
 - Antes de operar, ejecutar `gh auth status` desde el host. Se necesitan permisos del repositorio y el scope `project` para modificar el tablero.
-- **No cambiar credenciales, ejecutar `gh auth login` ni sustituir el canal de acceso sin instrucción de Pau.** No usar el navegador para operar sobre GitHub como alternativa a `gh`.
+- **No cambiar credenciales, ejecutar `gh auth login` ni sustituir el canal de acceso sin instrucción del usuario.** No usar el navegador para operar sobre GitHub como alternativa a `gh`.
 - Ante un fallo de acceso, detener las operaciones remotas e informar del comando y error, ocultando secretos. No iniciar otra tarea cuyo seguimiento no pueda mantenerse.
 
 ## Consultas
